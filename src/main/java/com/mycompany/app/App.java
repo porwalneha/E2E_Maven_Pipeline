@@ -1,3 +1,4 @@
+package com.mycompany.app;
 class App
 { 
 	// Your program begins with a call to main(). 
