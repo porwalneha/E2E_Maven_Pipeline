@@ -14,8 +14,8 @@ pipeline {
             /* post {
                 always {
                     junit '/var/lib/jenkins/workspace/E2E_maven_pipeline/target/surefire-reports/*.xml'
-                } */
-            }
+                } 
+            } */
         }
       /*  stage('Deliver') {
             steps {
