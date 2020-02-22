@@ -25,7 +25,9 @@ pipeline {
         } */
             stage('Deploy') {
             steps {
-                withCredentials([usernameColonPassword(credentialsId: 'admin', variable: 'UID')]) {
+              withCredentials([file(credentialsId: 'admin', variable: 'settings')]) {
+    // some block
+
     // some block
     sh 'mvn deploy'
     /*  sh 'mvn deploy:deploy-file -DpomFile=pom.xml -Dfile=target/my-app-1.0.jar -Durl=http://18.218.83.190:8081/nexus/content/repositories/releases/' */
