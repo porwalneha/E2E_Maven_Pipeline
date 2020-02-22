@@ -15,7 +15,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <build>
+  
     <distributionManagement>
 <repository>
 <id>nexus</id>
@@ -28,6 +28,7 @@
 <url>http://18.218.83.190:8081/repository/maven-snapshots/</url>
 </snapshotRepository>
 </distributionManagement>
+  <build>
     <plugins>
       <plugin>
         <!-- Build an executable JAR -->
