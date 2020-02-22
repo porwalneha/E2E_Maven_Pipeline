@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                  sh 'mvn -B -DskipTests clean package'
+                checkpoint 
             }
         }
         stage('Test') {
@@ -24,8 +25,12 @@ pipeline {
         } */
             stage('Deploy') {
             steps {
+                withCredentials([usernameColonPassword(credentialsId: 'admin', variable: 'UID')]) {
+    // some block
+
       sh 'mvn deploy:deploy-file -DpomFile=pom.xml -Dfile=target/my-app-1.0-SNAPSHOT.jar -Durl=http://18.218.83.190:8081/nexus/content/repositories/releases/'
                   }
+            }
             }
                    
                       
