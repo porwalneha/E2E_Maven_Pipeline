@@ -28,7 +28,7 @@ pipeline {
                 withCredentials([usernameColonPassword(credentialsId: 'admin', variable: 'UID')]) {
     // some block
 
-      sh 'mvn deploy:deploy-file -DpomFile=pom.xml -Dfile=target/my-app-1.0-SNAPSHOT.jar -Durl=http://18.218.83.190:8081/nexus/content/repositories/releases/'
+      sh 'mvn deploy:deploy-file -DpomFile=pom.xml -Dfile=target/my-app-1.0.jar -Durl=http://18.218.83.190:8081/nexus/content/repositories/releases/'
                   }
             }
             }
