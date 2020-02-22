@@ -24,7 +24,7 @@ pipeline {
         } */
             stage('Deploy') {
             steps {
-                  sh 'mvn clean deploy'
+      sh 'mvn deploy:deploy-file -DpomFile=pom.xml -Dfile=target/my-app-1.0-SNAPSHOT.jar -Durl=//http://18.218.83.190:8081/nexus/content/repositories/release'
                   }
             }
                    
