@@ -29,7 +29,7 @@ pipeline {
     // some block
 
     // some block
-    sh 'mvn -s settings.xml deploy'
+    sh 'mvn -s .m2/settings.xml deploy'
     /*  sh 'mvn deploy:deploy-file -DpomFile=pom.xml -Dfile=target/my-app-1.0.jar -Durl=http://18.218.83.190:8081/nexus/content/repositories/releases/' */
                   }
             }
